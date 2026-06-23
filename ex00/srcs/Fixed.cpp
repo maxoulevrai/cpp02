@@ -6,11 +6,11 @@
 /*   By: maleca <maleca@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/14 22:02:07 by maleca            #+#    #+#             */
-/*   Updated: 2026/06/14 22:41:24 by maleca           ###   ########.fr       */
+/*   Updated: 2026/06/23 22:01:44 by maleca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "../includes/Fixed.hpp"
 
 const int Fixed::_fractionnalBits = 8;
 
@@ -24,7 +24,7 @@ Fixed::Fixed(const Fixed& other) {
 }
 
 Fixed &Fixed::operator=(const Fixed &other) {
-	std::cout << "copy assignement operator called" << std::endl;
+	std::cout << "Copy assignement operator called" << std::endl;
 	if (this != &other)
 		this->_rawBits = other.getRawBits();
 	return (*this);
@@ -35,7 +35,7 @@ Fixed::~Fixed() {
 }
 
 
-int		Fixed::getRawBits() {
+int		Fixed::getRawBits() const {
 	std::cout << "getRawBits member function called" << std::endl;
 	return (this->_rawBits);
 }

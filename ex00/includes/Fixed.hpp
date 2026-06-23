@@ -6,7 +6,7 @@
 /*   By: maleca <maleca@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/14 21:37:56 by maleca            #+#    #+#             */
-/*   Updated: 2026/06/14 22:04:02 by maleca           ###   ########.fr       */
+/*   Updated: 2026/06/23 22:00:33 by maleca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Fixed {
 		Fixed &operator=(const Fixed &other);
 		~Fixed();
 
-		int		getRawBits();
+		int		getRawBits() const;
 		void	setRawBits(const int raw);
 };
 
