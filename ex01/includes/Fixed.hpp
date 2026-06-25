@@ -6,7 +6,7 @@
 /*   By: maleca <maleca@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/14 21:37:56 by maleca            #+#    #+#             */
-/*   Updated: 2026/06/23 22:00:33 by maleca           ###   ########.fr       */
+/*   Updated: 2026/06/25 18:11:15 by maleca           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,17 @@ class Fixed {
 		static const int	_fractionnalBits;
 	public:
 		Fixed();
+		Fixed(const int value);
+		Fixed(const float value);
 		Fixed(const Fixed& other);
 		Fixed &operator=(const Fixed &other);
+		Fixed &operator<<(const Fixed &other);
 		~Fixed();
 
 		int		getRawBits() const;
 		void	setRawBits(const int raw);
+		float	tofloat( void );
+		int		toInt( void );
 };
 
 #endif
